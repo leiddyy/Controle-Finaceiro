@@ -18,6 +18,8 @@ export const AuthProvider = ({ children }) => {
           localStorage.removeItem('meu_financeiro_token');
           setUser(null);
         }
+      } else {
+        setUser(null);
       }
       setLoading(false);
     }
