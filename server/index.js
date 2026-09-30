@@ -23,7 +23,7 @@ const clientDistPath = path.join(__dirname, '../client/dist');
 app.use(express.static(clientDistPath));
 
 // Rota coringa (SPA): Qualquer rota que não seja da API carrega o index.html do React
-app.get('*', (req, res) => {
+app.use((req, res) => {
   res.sendFile(path.join(clientDistPath, 'index.html'));
 });
 
