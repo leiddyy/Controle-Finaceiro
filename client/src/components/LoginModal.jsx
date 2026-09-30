@@ -23,7 +23,8 @@ export function LoginModal() {
         await login(email, password);
       }
     } catch (err) {
-      setError(err.response?.data?.error || 'Ocorreu um erro ao processar sua solicitação.');
+      const serverErr = err.response?.data?.error;
+      setError(typeof serverErr === 'string' ? serverErr : 'Ocorreu um erro ao processar sua solicitação.');
     } finally {
       setLoading(false);
     }
