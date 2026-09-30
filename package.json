@@ -1,16 +1,15 @@
 {
   "name": "controle_financeiro",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Meu Financeiro - Controle Financeiro Pessoal Fullstack",
+  "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js",
     "dev:server": "node server/index.js",
     "dev:client": "cd client && npm run dev",
     "dev": "cd client && npm run dev",
     "postinstall": "prisma generate",
-    "build": "cd client && npm install && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
